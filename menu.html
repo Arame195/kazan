@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class="knopka-nazad">
+        <div class="knopka">
+            <a href="index.html">Назад</a>
+        </div>
+    </section>
+
+    <section id="menu" aria-labelledby="menu-t">
+        <div class="wrap">
+            <div class="sec-head">
+                <h2 class="h2" id="menu-t" data-r>Меню</h2>
+                <p class="mute" style="max-width:32ch">
+                    ...
+                </p>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="Категории меню">
+                <button class="tab" role="tab" aria-selected="false" data-cat="main">Основные блюда</button>
+                <button class="tab" role="tab" aria-selected="false" data-cat="drinks">Напитки</button>
+            </div>
+
+            <div class="mlist" id="mlist" role="tabpanel"></div>
+
+            <template data-menu-template="main">
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-pasta.jpg" width="300" height="300" alt="Паста с грибами"
+                            loading="lazy" decoding="async" data-placeholder-tone="latte"
+                            data-placeholder-label="Паста с грибами"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Шурпа</h3><span class="price">400 ₽</span>
+                        </div>
+                        <p>...</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-chicken.jpg" width="300" height="300" alt="Курица с овощами"
+                            loading="lazy" decoding="async" data-placeholder-tone="coffee"
+                            data-placeholder-label="Курица с овощами"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Плов (Говядина)</h3><span class="price">400 ₽</span>
+                        </div>
+                        <p>Запечённая, картофельное пюре</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-shrimp-rice.jpg" width="300" height="300"
+                            alt="Рис с креветками" loading="lazy" decoding="async" data-placeholder-tone="peach"
+                            data-placeholder-label="Рис с креветками"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Плов (Баранина)</h3><span class="price">450 ₽</span>
+                        </div>
+                        <p>Чили, лайм, кинза</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-burger.jpg" width="300" height="300" alt="Бургер"
+                            loading="lazy" decoding="async" data-placeholder-tone="roast"
+                            data-placeholder-label="Бургер"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Манты</h3><span class="price">400 ₽</span>
+                        </div>
+                        <p>Говядина, чеддер, домашний соус</p>
+                    </div>
+                </article>
+
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-pasta.jpg" width="300" height="300" alt="Паста с грибами"
+                            loading="lazy" decoding="async" data-placeholder-tone="latte"
+                            data-placeholder-label="Паста с грибами"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Курица в тандыре</h3><span class="price">200 ₽</span>
+                        </div>
+                        <p>...</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-chicken.jpg" width="300" height="300" alt="Курица с овощами"
+                            loading="lazy" decoding="async" data-placeholder-tone="coffee"
+                            data-placeholder-label="Курица с овощами"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Самса</h3><span class="price">200 ₽</span>
+                        </div>
+                        <p>Запечённая, картофельное пюре</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-shrimp-rice.jpg" width="300" height="300"
+                            alt="Рис с креветками" loading="lazy" decoding="async" data-placeholder-tone="peach"
+                            data-placeholder-label="Рис с креветками"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Картофель по-деревенски</h3><span class="price">250 ₽</span>
+                        </div>
+                        <p>Чили, лайм, кинза</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-burger.jpg" width="300" height="300" alt="Бургер"
+                            loading="lazy" decoding="async" data-placeholder-tone="roast"
+                            data-placeholder-label="Бургер"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Соленья</h3><span class="price">250 ₽</span>
+                        </div>
+                        <p>Говядина, чеддер, домашний соус</p>
+                    </div>
+                </article>
+
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-shrimp-rice.jpg" width="300" height="300"
+                            alt="Рис с креветками" loading="lazy" decoding="async" data-placeholder-tone="peach"
+                            data-placeholder-label="Рис с креветками"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Салат овощной</h3><span class="price">250 ₽</span>
+                        </div>
+                        <p>Чили, лайм, кинза</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-burger.jpg" width="300" height="300" alt="Бургер"
+                            loading="lazy" decoding="async" data-placeholder-tone="roast"
+                            data-placeholder-label="Бургер"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Аджика/Соус</h3><span class="price">100 ₽</span>
+                        </div>
+                        <p>Говядина, чеддер, домашний соус</p>
+                    </div>
+                </article>
+            </template>
+
+            <template data-menu-template="drinks">
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-lemonade.jpg" width="300" height="300" alt="Лимонад дня"
+                            loading="lazy" decoding="async" data-placeholder-tone="olive"
+                            data-placeholder-label="Лимонад дня"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Газированные напитки добрый 0,3л/0,5л</h3><span class="price">130/150 ₽</span>
+                        </div>
+                        <p>Свежие фрукты, мята</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-tea.jpg" width="300" height="300" alt="Чай листовой"
+                            loading="lazy" decoding="async" data-placeholder-tone="sage"
+                            data-placeholder-label="Чай листовой"></div>
+                    <div>
+                        <div class="top">
+                            <h3>BURN</h3><span class="price">250 ₽</span>
+                        </div>
+                        <p>Чайник на двоих</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-cocoa.jpg" width="300" height="300" alt="Какао" loading="lazy"
+                            decoding="async" data-placeholder-tone="roast" data-placeholder-label="Какао"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Rich спритц красный апельсин 0,33л</h3><span class="price">--- ₽</span>
+                        </div>
+                        <p>Густое, с маршмеллоу</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-mors.jpg" width="300" height="300" alt="Морс" loading="lazy"
+                            decoding="async" data-placeholder-tone="peach" data-placeholder-label="Морс"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Rich TEA</h3><span class="price">--- ₽</span>
+                        </div>
+                        <p>Клюква или облепиха</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-cocoa.jpg" width="300" height="300" alt="Какао" loading="lazy"
+                            decoding="async" data-placeholder-tone="roast" data-placeholder-label="Какао"></div>
+                    <div>
+                        <div class="top">
+                            <h3>Соки и нектары добрый 0,3л</h3><span class="price">150 ₽</span>
+                        </div>
+                        <p>Густое, с маршмеллоу</p>
+                    </div>
+                </article>
+                <article class="mi">
+                    <div class="ph"><img src="images/menu-mors.jpg" width="300" height="300" alt="Морс" loading="lazy"
+                            decoding="async" data-placeholder-tone="peach" data-placeholder-label="Морс"></div>
+                    <div>
+                        <div class="top">
+                            <h3>PULPY 0,45л</h3><span class="price">--- ₽</span>
+                        </div>
+                        <p>Клюква или облепиха</p>
+                    </div>
+                </article>
+            </template>
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

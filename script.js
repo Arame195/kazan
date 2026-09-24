@@ -252,73 +252,50 @@ if ("IntersectionObserver" in window) {
 
    JS здесь только переключает категории.
    ========================================================== */
+const buttons = document.querySelectorAll(".category-btn");
+const sections = document.querySelectorAll(".menu-section");
 
-const menuTabs = $$(".tab");
-const menuTemplates =
-  $$("[data-menu-template]");
 
-const menuList = $("#mlist");
+buttons.forEach((button) => {
 
-function showMenuCategory(
-  category,
-  clickedTab = null
-) {
-  const template = menuTemplates.find(
-    item =>
-      item.dataset.menuTemplate === category
-  );
+  button.addEventListener("click", () => {
 
-  if (!template || !menuList) return;
+    const target = button.dataset.section;
 
-  menuList.innerHTML = template.innerHTML;
 
-  setupImages(menuList);
+    // Убираем active со всех кнопок
+    buttons.forEach((btn) => {
+      btn.classList.remove("active");
+    });
 
-  menuTabs.forEach(tab => {
-    tab.setAttribute(
-      "aria-selected",
-      String(
-        tab.dataset.cat === category
-      )
-    );
-  });
 
-  const activeTab =
-    clickedTab ||
-    menuTabs.find(
-      tab => tab.dataset.cat === category
-    );
+    // Убираем active со всех разделов
+    sections.forEach((section) => {
+      section.classList.remove("active");
+    });
 
-  if (activeTab) {
-    activeTab.scrollIntoView({
-      inline: "center",
-      block: "nearest",
+
+    // Активируем выбранную кнопку
+    button.classList.add("active");
+
+
+    // Показываем выбранный раздел
+    const targetSection = document.getElementById(target);
+
+    if (targetSection) {
+      targetSection.classList.add("active");
+    }
+
+
+    // Возвращаем страницу наверх
+    window.scrollTo({
+      top: 0,
       behavior: "smooth"
     });
-  }
 
-  menuList.classList.remove("fade");
-
-  void menuList.offsetWidth;
-
-  menuList.classList.add("fade");
-}
-
-menuTabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    showMenuCategory(
-      tab.dataset.cat,
-      tab
-    );
   });
+
 });
-
-const firstCategory =
-  menuTabs[0]?.dataset.cat;
-
-if (firstCategory) {
-  showMenuCategory(firstCategory);
-}
 
 /* ==========================================================
    7. LIGHTBOX — ГАЛЕРЕЯ + ВИДЕО

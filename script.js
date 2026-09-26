@@ -639,3 +639,57 @@ if (bookingForm) {
     }
   );
 }
+
+//Cloud Workflow
+const form = document.getElementById("bform");
+const note = document.getElementById("bnote");
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const button = form.querySelector("button[type='submit']");
+
+  button.disabled = true;
+  note.textContent = "Отправляем заявку...";
+
+  const data = Object.fromEntries(
+    new FormData(form)
+  );
+
+  try {
+    const response = await fetch(
+      "https://damp-star-20ef.rwgjsrz5pk.workers.dev",
+      {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify(data)
+      }
+    );
+
+    const result = await response.json();
+
+    if (!response.ok || !result.success) {
+      throw new Error(
+        result.message || "Не удалось отправить заявку"
+      );
+    }
+
+    note.textContent =
+      "Заявка отправлена! Мы свяжемся с вами.";
+
+    form.reset();
+
+  } catch (error) {
+    console.error(error);
+
+    note.textContent =
+      "Не удалось отправить заявку. Попробуйте ещё раз.";
+
+  } finally {
+    button.disabled = false;
+  }
+});

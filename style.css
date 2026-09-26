@@ -7,44 +7,25 @@
   --acc: #556238;
   --acc-ink: #ffffff;
   --line: rgba(42, 40, 38, .14);
+
   --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, "Times New Roman", serif;
   --sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
   --r-lg: 28px;
   --r-md: 18px;
   --r-sm: 12px;
+
   --pad: clamp(1.1rem, 4vw, 3rem);
   --max: 1360px;
-}
-
-@media (prefers-color-scheme:dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #1d1b19;
-    --bg2: #262320;
-    --card: #24211f;
-    --ink: #f1ece3;
-    --mute: #a79f93;
-    --acc: #a9b77a;
-    --acc-ink: #1d1b19;
-    --line: rgba(241, 236, 227, .16)
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: #1d1b19;
-  --bg2: #262320;
-  --card: #24211f;
-  --ink: #f1ece3;
-  --mute: #a79f93;
-  --acc: #a9b77a;
-  --acc-ink: #1d1b19;
-  --line: rgba(241, 236, 227, .16)
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
+
+
 
 html {
   scroll-behavior: smooth;
@@ -60,7 +41,6 @@ body {
 
 body {
   background: var(--bg);
-  color: var(--ink);
   font: 400 1.0625rem/1.65 var(--sans);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased
@@ -95,7 +75,7 @@ button {
   width: 100%;
   max-width: var(--max);
   margin-inline: auto;
-  padding-inline: var(--pad)
+  padding-inline: var(--pad);
 }
 
 section {
@@ -124,7 +104,7 @@ h3 {
 }
 
 .mute {
-  color: var(--mute)
+  color: var(--mute);
 }
 
 .sr {
@@ -132,7 +112,7 @@ h3 {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip: rect(0 0 0 0)
+  clip: rect(0 0 0 0);
 }
 
 /* buttons */
@@ -197,11 +177,11 @@ h3 {
 }
 
 .hdr.solid {
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  background: rgba(251, 248, 242, 0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  color: var(--ink);
-  box-shadow: 0 1px 0 var(--line)
+  color: #2a2826;
+  box-shadow: 0 1px 0 rgba(42, 40, 38, 0.14);
 }
 
 .hdr .in {
@@ -215,7 +195,7 @@ h3 {
   font-family: var(--serif);
   font-size: 1.7rem;
   font-weight: 600;
-  letter-spacing: -.01em
+  letter-spacing: -.01em;
 }
 
 .nav {
@@ -793,25 +773,6 @@ h3 {
     margin-top: 0 !important
   }
 }
-
-/* menu */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: #f7f5f0;
-  color: #222;
-}
-
-
-/* ========================= */
-/* HEADER */
-/* ========================= */
 
 .header {
   text-align: center;
@@ -1541,7 +1502,7 @@ footer {
 .f-top {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 2rem
+  gap: 2rem;
 }
 
 .f-top h4 {
